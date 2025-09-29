@@ -1,0 +1,11 @@
+# MkDocs build
+site/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/

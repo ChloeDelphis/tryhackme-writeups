@@ -1,0 +1,29 @@
+site_name: TryHackMe Writeups - Chloé
+site_description: Writeups and notes TryHackMe
+site_author: Chloé Delphis
+
+nav:
+  - About: index.md
+  - Rooms:
+      - Linux Fundamentals: 01-rooms/linux-fundamentals.md
+      - Web 101: 01-rooms/web-101.md
+
+  - Tools:
+      - Gobuster: 02-tools/gobuster.md
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    primary: indigo
+    accent: deeporange
+
+plugins:
+  - search
+
+extra:
+  generator: false
+
+extra_css:
+  - styles/extra.css
