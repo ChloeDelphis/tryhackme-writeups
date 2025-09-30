@@ -13,8 +13,6 @@
       
       
       
-        <link rel="prev" href="../..">
-      
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Gobuster - TryHackMe Writeups - Chloé</title>
+        <title>Vulnerabilities and Exploit - TryHackMe Writeups - Chloé</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gobuster" class="md-skip">
+        <a href="#vulnerabilities-and-exploit" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gobuster
+              Vulnerabilities and Exploit
             
           </span>
         </div>
@@ -223,20 +221,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -252,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -263,32 +259,33 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
+    <li class="md-nav__item">
+      <a href="../search-engines.md" class="md-nav__link">
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
   
   
   <span class="md-ellipsis">
-    Gobuster
+    Search Engines
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobuster.md" class="md-nav__link">
         
   
   
@@ -299,62 +296,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#common-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common modes:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful flags:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tiny-cheatsheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tiny cheatsheet
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -394,36 +335,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-modes" class="md-nav__link">
+  <a href="#cve-common-vulnerabilities-and-exposures" class="md-nav__link">
     <span class="md-ellipsis">
-      Common modes:
+      CVE - Common Vulnerabilities and Exposures
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#exploit-database" class="md-nav__link">
     <span class="md-ellipsis">
-      Example:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful flags:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tiny-cheatsheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tiny cheatsheet
+      Exploit database
     </span>
   </a>
   
@@ -445,36 +368,14 @@
 
 
 
-<h1 id="gobuster">Gobuster</h1>
-<p><strong>What it is:</strong> a command-line tool that brute-forces paths, files, DNS names or virtual hosts on a web server.</p>
-<p><strong>Why use it:</strong> to discover hidden directories, files, or subdomains that aren’t linked from the site (useful in CTFs/labs).</p>
-<h2 id="common-modes">Common modes:</h2>
-<p>dir — directory / file brute-force (e.g. /admin, backup.zip).</p>
-<p>dns — subdomain enumeration.</p>
-<p>vhost — virtual host discovery.</p>
-<p>fuzz — custom fuzzing of any target pattern.</p>
-<h2 id="example">Example:</h2>
-<pre><code class="language-shell">gobuster dir -u http://10.10.10.10 -w /path/to/wordlist.txt -t 50
-# ( -u target URL, -w wordlist, -t threads )
-</code></pre>
-<h2 id="useful-flags">Useful flags:</h2>
-<p><code>-x</code> to try file extensions (e.g. .php,.txt)</p>
-<p><code>-s</code> to show only certain HTTP status codes (e.g. 200,301)</p>
-<p><code>-o</code> to save output to a file</p>
-<p>Tip: pick a good wordlist (SecLists is common) and be respectful — only run against lab/authorized targets.</p>
-<h2 id="tiny-cheatsheet">Tiny cheatsheet</h2>
-<pre><code class="language-shell"># directory brute-force
-gobuster dir -u http://target -w /usr/share/wordlists/dirb/common.txt
-
-# directory brute-force with extensions and save output
-gobuster dir -u http://target -w wordlist.txt -x php,txt -o results.txt
-
-# subdomain enumeration
-gobuster dns -d example.com -w subdomains.txt
-
-# virtual host discovery
-gobuster vhost -u http://target -w vhosts.txt
-</code></pre>
+<h1 id="vulnerabilities-and-exploit">Vulnerabilities and Exploit</h1>
+<h2 id="cve-common-vulnerabilities-and-exposures">CVE - Common Vulnerabilities and Exposures</h2>
+<p>Each vulnerability is assigned a CVE ID with a standardized format like <code>CVE-2024-29988</code></p>
+<p>The MITRE corporation maintains the CVE system.</p>
+<p><a href="https://www.cve.org/">CVE Program Mission</a><br />
+<a href="https://nvd.nist.gov/">National Vulnerability Database</a></p>
+<h2 id="exploit-database"><a href="https://www.exploit-db.com/">Exploit database</a></h2>
+<p>Exploit Database is a public archive of exploit code, proof-of-concepts, shellcode, advisories and related vulnerability materials. It’s a community-driven and curated repository (maintained by Offensive Security) that collects examples of real-world exploits and links them to CVEs and references so security researchers and practitioners can study, reproduce, and learn from them.</p>
 
 
 
