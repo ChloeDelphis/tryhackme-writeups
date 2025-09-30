@@ -4,11 +4,12 @@ site_author: Chloé Delphis
 
 nav:
   - About: index.md
-  - Rooms:
-      - Linux Fundamentals: 01-rooms/linux-fundamentals.md
-      - Web 101: 01-rooms/web-101.md
+  # - Rooms:
+  # - Linux Fundamentals: 01-rooms/linux-fundamentals.md
+  # - Web 101: 01-rooms/web-101.md
 
   - Tools:
+      - Search Engines: 02-tools/search-engines.md
       - Gobuster: 02-tools/gobuster.md
 
 theme:
