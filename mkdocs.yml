@@ -10,7 +10,7 @@ nav:
 
   - Tools:
       - Search Engines: 02-tools/1-search-engines.md
-      - Search Engines: 02-tools/2-cve.md
+      - CVE: 02-tools/2-cve.md
       - Gobuster: 02-tools/3-gobuster.md
 
 theme:
