@@ -9,8 +9,9 @@ nav:
   # - Web 101: 01-rooms/web-101.md
 
   - Tools:
-      - Search Engines: 02-tools/search-engines.md
-      - Gobuster: 02-tools/gobuster.md
+      - Search Engines: 02-tools/1-search-engines.md
+      - Search Engines: 02-tools/2-cve.md
+      - Gobuster: 02-tools/3-gobuster.md
 
 theme:
   name: material
